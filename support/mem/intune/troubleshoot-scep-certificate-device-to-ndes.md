@@ -221,8 +221,8 @@ If the SCEP application pool isn't started, check the application event log on t
 - **Cause 4**: The NDESPolicy module certificate has expired.
 
   The CAPI2 log (see Cause 2's resolution) will show errors relating to the certificate referenced by `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy\NDESCertThumbprint` being outside of the certificate's validity period.
-
-  **Resolution**: Renew the certificate and reinstall the connector.
+            
+  **Resolution**: Renew the certificate and reinstall the connector. (This solution applies only to the old intune connector with version lower than 6.2109.51.0)
 
    1. Use `certlm.msc` to open the local computer certificate store, expand **Personal**, and then select **Certificates**.
    1. In the list of certificates, find an expired certificate that satisfies the following conditions:
